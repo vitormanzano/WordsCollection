@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WordsCollection.Data;
+using WordsCollection.Setup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(connectionString: builder.Configuration.GetConnectionString("PostgresConnection"));
 });
+
+builder.Services.RegisterService();
 
 var app = builder.Build();
 
