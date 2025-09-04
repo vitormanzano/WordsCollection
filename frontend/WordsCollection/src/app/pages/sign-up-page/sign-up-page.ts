@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TopBar } from "../../components/top-bar/top-bar";
 import { UserAuthForm } from "../../components/user-auth-form/user-auth-form";
 
@@ -9,5 +9,9 @@ import { UserAuthForm } from "../../components/user-auth-form/user-auth-form";
   styleUrl: './sign-up-page.css'
 })
 export class SignUpPage {
+  @Input()
+  isSignUp: boolean = true;
 
+  @Input()
+  linkText: string = '';
 }
