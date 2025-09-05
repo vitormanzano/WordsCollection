@@ -4,7 +4,7 @@ import { SignUpPage } from './pages/sign-up-page/sign-up-page';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SignUpPage],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
