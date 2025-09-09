@@ -1,0 +1,20 @@
+<div class="user-auth-form__container">
+    <form class="user-auth-form" (ngSubmit)="onSubmit()">
+        <h2 class="user-auth-form__title">{{ isSignUp ? 'Sign Up' : 'Sign In' }}</h2>
+        <div class="user-auth-form__field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email" required />
+        </div>
+        <div class="user-auth-form__field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" required />
+        </div>
+        <button type="submit" class="user-auth-form__submit-button">
+            {{ isSignUp ? 'Sign Up' : 'Sign In' }}
+        </button>
+        <p class="user-auth-form__toggle-text">
+            {{ isSignUp ? 'Already have an account?' : "Don't have an account?" }}
+            <a [routerLink]="[linkText]" (click)="onSubmit()">{{ isSignUp ? 'Sign In' : 'Sign Up' }}</a>
+        </p>
+    </form>
+</div>
